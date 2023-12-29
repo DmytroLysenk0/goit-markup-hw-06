@@ -1,3 +1,8 @@
+.hide {
+  display: none;
+}
+
+
 html {
   box-sizing: border-box;
 }
@@ -7,12 +12,7 @@ html {
 *::before {
   box-sizing: inherit;
 }
-/* прибрати!!!*/
-.hide {
-  display: none;
-}
 
-/* ------------------------------ */
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -67,36 +67,34 @@ a {
 img {
   display: block;
 }
-/* базові стилі для мобільних пристроїв */
+
 .container {
-  min-width: 320px;
+  /* min-width: 320px; */
   max-width: 320px;
   padding-left: 16px;
   padding-right: 16px;
+
   margin-left: auto;
   margin-right: auto;
-}
 
-/* -------------------------------------------------- */
-/* розмір екрану 768px */
-@media screen and (min-width: 768px) {
+  outline: 3px dashed navy;
+}
+@media only screen and (min-width: 768px) {
   .container {
-    /* max ширина контейнера */
     max-width: 768px;
   }
 }
-/* розмір екрану 1158px */
-@media screen and (min-width: 1158px) {
+@media only screen and (min-width: 1158px) {
   .container {
-    /* max ширина контейнера */
     max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
   }
 }
 
-/* header */
+/* -------------------------------------------------- */
 
+/* header */
 .header {
   border-bottom: 1px solid #e7e9fc;
   display: block;
@@ -344,6 +342,9 @@ img {
   background: #f4f4fd;
 }
 
+.feature-icon {
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -396,10 +397,10 @@ img {
   padding-bottom: 48px;
 }
 
-@media screen and (min-width: 1158px) {
-  .team {
+@media only screen and (min-width: 1158px) {
+  .team{
     padding-top: 120px;
-    padding-bottom: 120px;
+  padding-bottom: 120px;
   }
 }
 
@@ -421,8 +422,18 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 72px;
+  
 }
-
+@media only screen and (min-width: 768px) {
+  .team-scroll {
+    gap: 64px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .team-scroll {
+    gap: 24px;
+  }
+}
 .team-list {
   width: 100%;
   border-radius: 0px 0px 4px 4px;
@@ -435,13 +446,11 @@ img {
 @media only screen and (min-width: 768px) {
   .team-list {
     width: calc((100% - 24px) / 2);
-    gap: 24px;
   }
 }
-
 @media only screen and (min-width: 1158px) {
   .team-list {
-    width: calc((100% - 72px) / 4);
+    width: calc((100% - 24px * 3) / 4);
     
   }
 }
