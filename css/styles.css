@@ -7,7 +7,12 @@ html {
 *::before {
   box-sizing: inherit;
 }
+/* прибрати!!!*/
+.hide {
+  display: none;
+}
 
+/* ------------------------------ */
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -62,18 +67,36 @@ a {
 img {
   display: block;
 }
-
+/* базові стилі для мобільних пристроїв */
 .container {
-  max-width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
+  min-width: 320px;
+  max-width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
   margin-left: auto;
   margin-right: auto;
 }
 
 /* -------------------------------------------------- */
+/* розмір екрану 768px */
+@media screen and (min-width: 768px) {
+  .container {
+    /* max ширина контейнера */
+    max-width: 768px;
+  }
+}
+/* розмір екрану 1158px */
+@media screen and (min-width: 1158px) {
+  .container {
+    /* max ширина контейнера */
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 
 /* header */
+
 .header {
   border-bottom: 1px solid #e7e9fc;
   display: block;
@@ -321,9 +344,6 @@ img {
   background: #f4f4fd;
 }
 
-.feature-icon {
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -372,8 +392,15 @@ img {
 
 .team {
   background-color: #f4f4fd;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+@media screen and (min-width: 1158px) {
+  .team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 
 .title-team {
@@ -392,17 +419,31 @@ img {
 
 .team-scroll {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px;
 }
 
 .team-list {
-  width: calc((100% - 72px) / 4);
+  width: 100%;
   border-radius: 0px 0px 4px 4px;
   background-color: #ffffff;
 
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+@media only screen and (min-width: 768px) {
+  .team-list {
+    width: calc((100% - 24px) / 2);
+    gap: 24px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .team-list {
+    width: calc((100% - 72px) / 4);
+    
+  }
 }
 
 .member-name {
@@ -686,7 +727,8 @@ img {
   height: 100vh;
 
   background-color: rgba(46, 47, 66, 0.4);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   opacity: 0;
   visibility: hidden;
@@ -706,8 +748,8 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1); 
-  
+  transform: translate(-50%, -50%) scale(1);
+
   width: 408px;
   min-height: 584px;
 
@@ -716,12 +758,9 @@ img {
   border-radius: 4px;
   background: #fcfcfc;
 
-  
-
-  box-shadow:0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  
 }
 .modal-btn {
   position: absolute;
@@ -740,7 +779,8 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   fill: #e7e9fc;
   stroke-width: 1px;
@@ -749,24 +789,23 @@ img {
 .modal-btn:hover {
   background-color: #404bbf;
   border: none;
-   
 }
 .modal-btn:focus {
-  background-color: #404bbf; 
-  border: none; 
+  background-color: #404bbf;
+  border: none;
 }
 
 .modal-btn:hover .modal-btn-icon {
-  fill: #ffffff; 
+  fill: #ffffff;
 }
 
 .modal-btn:focus .modal-btn-icon {
-  fill: #ffffff; 
+  fill: #ffffff;
 }
 .modal-btn-icon {
   background-color: #e7e9fc;
   fill: #2e2f42;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-caption {
   font-weight: 500;
@@ -776,11 +815,10 @@ img {
 
   text-align: center;
   letter-spacing: 0.02em;
-  
+
   color: #2e2f42;
-  
+
   margin-bottom: 16px;
-  
 }
 
 .icon-input {
@@ -793,7 +831,7 @@ img {
   left: 16px;
   transform: translateY(-50%);
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   fill: transparent;
   stroke: #2e2f42;
@@ -807,11 +845,9 @@ img {
   border-radius: 4px;
   padding-left: 38px;
 
-
-  
-  background-color: transparent; 
+  background-color: transparent;
   outline: transparent;
- 
+
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* змінити колір іконуи при фокусі на input */
@@ -828,8 +864,8 @@ img {
   color: #8e8f99;
 
   font-size: 12px;
-  line-height: 1.17; 
-  
+  line-height: 1.17;
+
   letter-spacing: 0.04em;
 }
 .text-label {
@@ -837,10 +873,8 @@ img {
   margin-bottom: 4px;
 }
 .text-textarea {
-
   border-radius: 4px;
   outline: transparent;
-  
 
   width: 100%;
   height: 120px;
@@ -869,26 +903,27 @@ img {
   margin-bottom: 24px;
 }
 .privacy-policy {
-  width: 16px; 
+  width: 16px;
   height: 16px;
   color: #4d5ae5;
-  border: 1px solid rgba(46, 47, 66, 0.4); 
+  border: 1px solid rgba(46, 47, 66, 0.4);
   font-size: 12px;
   border-radius: 2px;
   line-height: 16px;
   letter-spacing: 0.48px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
   margin-right: 8px;
 
-
   text-decoration-line: underline;
 }
 .field {
-  margin-bottom: 8px; 
+  margin-bottom: 8px;
 }
 .field-textarea {
   margin-bottom: 16px;
@@ -914,7 +949,7 @@ img {
 
   background-color: #4d5ae5;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -932,24 +967,20 @@ img {
 }
 
 .visually-hidden:checked + .field_checkbox > .privacy-policy {
-  background-color:#404bbf;
-  border: none; 
-  fill: #F4F4FD;
-
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
 }
 .field_checkbox {
   font-size: 12px;
-  line-height: 1.17; 
-  letter-spacing: 0.04em; 
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   color: #8e8f99;
-
 }
 .svg-checkbox {
-
 }
 .link-privacy-policy {
   color: #4d5ae5;
-
 }
 
 /* form footer */
@@ -996,12 +1027,11 @@ img {
   height: 40px;
 
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   /* gap: 16px; */
 
-  
-  border: none; 
+  border: none;
   border-radius: 4px;
   background: #4d5ae5;
 
@@ -1010,7 +1040,6 @@ img {
   color: #fff;
   text-align: center;
   cursor: pointer;
-  
 
   font-weight: 500;
   line-height: 1.5;
