@@ -2,6 +2,7 @@
   display: none;
 }
 
+
 html {
   box-sizing: border-box;
 }
@@ -65,7 +66,10 @@ a {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
+
 
 .container {
   /* min-width: 320px; */
@@ -397,9 +401,9 @@ img {
 }
 
 @media only screen and (min-width: 1158px) {
-  .team {
+  .team{
     padding-top: 120px;
-    padding-bottom: 120px;
+  padding-bottom: 120px;
   }
 }
 
@@ -421,19 +425,25 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 72px;
+  justify-content: center;
+  
 }
 @media only screen and (min-width: 768px) {
   .team-scroll {
-    gap: 64px;
+    gap: 64px 24px;
+    max-width: 552px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media only screen and (min-width: 1158px) {
   .team-scroll {
     gap: 24px;
+    max-width: 1158px;
   }
 }
 .team-list {
-  width: 100%;
+  width: 264px;
   border-radius: 0px 0px 4px 4px;
   background-color: #ffffff;
 
@@ -449,8 +459,10 @@ img {
 @media only screen and (min-width: 1158px) {
   .team-list {
     width: calc((100% - 24px * 3) / 4);
+    
   }
 }
+
 
 .member-name {
   padding-top: 32px;
@@ -559,25 +571,13 @@ img {
 /* Our Portfolio */
 
 .portfolio {
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
-@media only screen and (min-width: 768px) {
-  .portfolio {
-  }
-}
-@media only screen and (min-width: 1158px) {
-  .portfolio {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-}
+
 .title-portfolio {
   margin-bottom: 72px;
 
-
-
-  
   color: #2e2f42;
   text-align: center;
   font-family: Roboto;
@@ -592,32 +592,13 @@ img {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 48px;
-}
-@media only screen and (min-width: 768px) {
-  .portfolio-list {
-    gap: 72px 24px;
-  }
-}
-@media only screen and (min-width: 1158px) {
-  .portfolio-list{
-    gap: 24px 48px;
-  }
+  column-gap: 24px;
+  row-gap: 48px;
 }
 
 .portfolio-scroll {
-  
+  width: calc((100% - 48px) / 3);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-@media only screen and (min-width: 768px) {
-  .portfolio-scroll {
-    width: calc((100% - 24px) / 2);
-  }
-}
-@media only screen and (min-width: 1158px) {
-  .portfolio-scroll {
-    width: calc((100% - 48px) / 3);
-  }
 }
 
 .portfolio-scroll:hover {
@@ -656,8 +637,6 @@ img {
 
   padding: 40px 32px;
 
-
-  
   color: #f4f4fd;
   background-color: #4d5ae5;
   line-height: 1.5;
