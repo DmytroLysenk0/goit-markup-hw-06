@@ -431,7 +431,8 @@ img {
 @media only screen and (min-width: 768px) {
   .team-scroll {
     gap: 64px 24px;
-    max-width: 552px;
+    /* 552+15*2 */
+    max-width: 582px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -603,7 +604,8 @@ img {
 
 @media only screen and (min-width: 768px) {
   .portfolio-list {
-    max-width: 736px;
+    /* 722+15*2 */
+    max-width: 752px;
     gap: 72px 24px;
     margin-left: auto;
     margin-right: auto;
