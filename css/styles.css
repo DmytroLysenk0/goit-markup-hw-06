@@ -124,6 +124,12 @@ img {
   text-transform: uppercase;
   color: #4d5ae5;
 }
+@media only screen and (max-width: 767.98px) {
+  .logo {
+    padding: 16px 0;
+    
+  }
+}
 
 .link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -213,6 +219,12 @@ img {
 .nav-list {
   display: flex;
   align-items: center;
+}
+@media only screen and (max-width: 767.98px) {
+  .nav-list {
+    flex-grow: 1;
+    
+  }
 }
 
 .addres-link {
@@ -1172,4 +1184,44 @@ img {
 .input-subscribe-icon {
   margin-left: 16px;
   fill: #ffffff;
+}
+/* Mobile menu */
+.menu-btn {
+  /* для вирівнювання іконки всередині кнопки */
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: auto;
+}
+@media only screen and (min-width: 768px) {
+  .menu-btn {
+    display: none;
+    
+  }
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: background: #fff;
+
+}
+.menu-btn {
+}
+.menu-btn-icon {
+}
+.mobile-menu-list {
+}
+.mobile-menu-item {
+}
+.mobile-menu-link {
+}
+.mobile-menu-contacts {
+}
+.mobile-menu-contact {
+}
+.mobile-menu-socials {
 }
