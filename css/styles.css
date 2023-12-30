@@ -198,9 +198,16 @@ img {
   color: #404bbf;
 }
 
-/* Studio Portfolio Contacts 3 кнопки*/
+/* Header navi - Studio Portfolio Contacts 3 кнопки*/
 .list {
+  display: flex;
   gap: 40px;
+}
+@media only screen and (max-width: 767.98px) {
+  .list {
+    display: none;
+    
+  }
 }
 
 .nav-list {
@@ -213,9 +220,6 @@ img {
   align-items: center;
 }
 
-.list {
-  display: flex;
-}
 
 .nav-list .link {
   color: #2e2f42;
@@ -235,6 +239,12 @@ img {
 .contacts-list {
   display: flex;
   justify-content: end;
+}
+@media only screen and (max-width: 767.98px) {
+  .contacts-list {
+    display: none;
+    
+  }
 }
 
 .contacts-list .link {
