@@ -38,7 +38,7 @@ li {
   padding: 0;
   text-decoration: none;
 
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 }
 
 p {
@@ -123,6 +123,11 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+}
+@media only screen and (min-width: 768px) {
+  .logo {
+    margin-right: 120px;
+  }
 }
 @media only screen and (max-width: 767.98px) {
   .logo {
@@ -245,12 +250,27 @@ img {
 }
 
 .contacts-list {
-  display: flex;
-  justify-content: end;
+  /* display: flex;
+  justify-content: end; */
 }
+
 @media only screen and (max-width: 767.98px) {
   .contacts-list {
     display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .contacts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+ 
+}
+@media only screen and (min-width: 1158px) {
+  .contacts-list {
+    display: flex;
+    justify-content: end;
   }
 }
 
@@ -1191,7 +1211,6 @@ img {
   display: flex;
   flex-direction: column;
 
-
   position: fixed;
   top: 0;
   left: 0;
@@ -1208,7 +1227,6 @@ img {
 }
 .mobile-menu.is-open {
   transform: translateX(0);
-  
 }
 /*  .menu-btn вже є в header, тому треба уточникти, що якщо ця кнопка в .mobile-menu, то ...*/
 .mobile-menu .menu-btn {
@@ -1232,10 +1250,9 @@ img {
   margin-bottom: auto;
 }
 .mobile-menu-item {
-  
 }
 .mobile-menu-item:not(:last-child) {
-margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 .mobile-menu-link {
   font-size: 36px;
@@ -1255,7 +1272,6 @@ margin-bottom: 40px;
   margin-bottom: 24px;
 }
 .mobile-menu-contact {
-  
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
@@ -1263,7 +1279,7 @@ margin-bottom: 40px;
   color: #434455;
 }
 .mobile-menu-contact.accent {
-  color:#4D5AE5;
+  color: #4d5ae5;
 }
 .mobile-menu-socials {
   display: flex;
