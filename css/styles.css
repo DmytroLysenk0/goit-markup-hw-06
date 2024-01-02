@@ -80,7 +80,7 @@ img {
   margin-left: auto;
   margin-right: auto;
 
-  /* outline: 3px dashed navy; */
+  /* outline: 3px dashed navy; */ 
 }
 @media only screen and (min-width: 768px) {
   .container {
@@ -111,12 +111,6 @@ img {
   justify-content: space-between;
   align-items: center;
 }
-/* @media only screen and (min-width: 768px) {
-  .header-container { 
-   
-    
-  }
-} */
 
 /* logo Web Studio */
 
@@ -1415,3 +1409,41 @@ img {
   height: 40px;
 }
 /* Footer mobile */
+.container {
+}
+.footer-container {
+}
+.footer-part1 {
+}
+.logo-footer {
+}
+.logo-link-footer {
+}
+.text-footer {
+}
+.social-list {
+}
+.text-social {
+}
+.icon-team-footer {
+}
+.circle-icon {
+}
+.link-sicial {
+}
+.svg-footer {
+}
+.form-footer {
+}
+.footer-caption {
+}
+.subscribe-form {
+}
+.form-field {
+}
+.form-input-subscribe {
+}
+.input-subscribe-btn {
+}
+.input-subscribe-icon {
+}
