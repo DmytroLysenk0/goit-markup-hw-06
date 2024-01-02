@@ -80,7 +80,7 @@ img {
   margin-left: auto;
   margin-right: auto;
 
-  outline: 3px dashed navy;
+  /* outline: 3px dashed navy; */
 }
 @media only screen and (min-width: 768px) {
   .container {
@@ -110,6 +110,10 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .header-container {
+  }
 }
 
 /* logo Web Studio */
@@ -337,7 +341,6 @@ img {
   margin-bottom: 72px;
   margin-left: auto;
   margin-right: auto;
-  
 
   font-size: 56px;
   line-height: 1.07;
@@ -345,7 +348,6 @@ img {
   letter-spacing: 0.02em;
   color: #ffffff;
 
-  
   font-size: 36px;
   font-weight: 700;
   line-height: 1.1;
@@ -355,13 +357,10 @@ img {
 
 @media only screen and (min-width: 768px) {
   .hero-text {
-    
-
     margin-bottom: 36px;
 
     font-size: 56px;
     line-height: 1.08; /* 107.143% */
-    
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -601,7 +600,9 @@ img {
     width: calc((100% - 24px * 3) / 4);
   }
 }
-
+.team-list-img {
+  width: 100%;
+}
 .member-name {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -879,14 +880,11 @@ img {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.32px;
-
-  
 }
 @media only screen and (min-width: 1158px) {
   .text-footer {
     max-width: 264px;
     margin-bottom: 0px;
-    
   }
 }
 
@@ -928,7 +926,6 @@ img {
 .icon-team-footer {
   display: flex;
   gap: 16px;
-  
 }
 @media only screen and (max-width: 767.98px) {
   .icon-team-footer {
@@ -992,10 +989,9 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media only screen and (min-width: 768px) {
-  .modal { 
+  .modal {
     width: 408px;
-  min-height: 584px;
-    
+    min-height: 584px;
   }
 }
 .modal-btn {
@@ -1059,8 +1055,6 @@ img {
 @media only screen and (min-width: 768px) {
   .modal-caption {
     width: 360px;
-
-    
   }
 }
 
@@ -1236,13 +1230,11 @@ img {
     margin-left: 0px;
     max-width: 453px;
     width: 100%;
-    
   }
 }
 @media only screen and (min-width: 1158px) {
   .form-footer {
     margin-left: 80px;
-    
   }
 }
 
@@ -1253,13 +1245,10 @@ img {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-
-  
 }
 @media only screen and (max-width: 767.98px) {
   .footer-caption {
     text-align: center;
-    
   }
 }
 .subscribe-form {
@@ -1271,7 +1260,6 @@ img {
   .subscribe-form {
     flex-wrap: wrap;
     justify-content: center;
-    
   }
 }
 .form-field {
@@ -1317,14 +1305,11 @@ img {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
-
- 
 }
 
 @media only screen and (max-width: 767.98px) {
   .input-subscribe-btn {
     margin-bottom: 96px;
-    
   }
 }
 .input-subscribe-icon {
