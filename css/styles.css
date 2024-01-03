@@ -245,9 +245,13 @@ img {
 }
 
 /* contacts header телефон та пошта*/
-.addres-link:not(:last-child) {
-  margin-right: 40px;
+@media only screen and (min-width: 1158px) {
+    .addres-link:not(:last-child) {
+      margin-right: 40px;
+  }
 }
+
+
 
 .contacts-list {
   /* display: flex;
@@ -257,6 +261,7 @@ img {
 @media only screen and (max-width: 767.98px) {
   .contacts-list {
     display: none;
+  
   }
 }
 @media only screen and (min-width: 768px) {
@@ -264,6 +269,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
+    flex-direction: column;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -279,6 +285,12 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+}
+@media only screen and (min-width: 768px) {
+  .contacts-list .link {
+    font-size: 12px;
+    
+  }
 }
 
 .contacts {
@@ -310,7 +322,7 @@ img {
   background-size: cover;
 
   padding-top: 72px;
-  padding-bottom: 200px;
+  padding-bottom: 72px;
 
   max-width: 1440px;
   margin: 0 auto;
@@ -319,7 +331,7 @@ img {
 @media only screen and (min-width: 768px) {
   .hero {
     padding-top: 112px;
-    padding-bottom: 204px;
+    padding-bottom: 112px;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -400,8 +412,15 @@ img {
 
 /* section Feauture схований заголовок */
 .hidden {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+@media only screen and (min-width: 1158px) {
+  .hidden {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    
+  }
 }
 
 .feature-border {
@@ -415,9 +434,17 @@ img {
   border: 1px solid #8e8f99;
   background: #f4f4fd;
 }
-
-.feature-icon {
+.feature-border {
+  /* якщо залишити visibility: hidden; - то буде зїдати місце , яке приховане від очей, але при цьому буде відступ за свома розмірами  */
+  display: none;
 }
+@media only screen and (min-width: 1158px) {
+  .feature-border {
+    display: flex;
+  }
+}
+
+
 
 .visually-hidden {
   position: absolute;
@@ -472,14 +499,7 @@ img {
   }
 }
 
-.feature-border {
-  visibility: hidden;
-}
-@media only screen and (min-width: 1158px) {
-  .feature-border {
-    visibility: visible;
-  }
-}
+
 
 .title-feature {
   margin-bottom: 8px;
@@ -530,8 +550,8 @@ img {
 
 .team {
   background-color: #f4f4fd;
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 @media only screen and (min-width: 1158px) {
@@ -831,6 +851,9 @@ img {
   .footer-container {
     display: flex;
     flex-wrap: wrap;
+    padding-left: 94px;
+    gap: 72px 24px;
+    padding-left: 94px;
   }
 }
 
@@ -1303,11 +1326,11 @@ img {
   letter-spacing: 0.04em;
 }
 
-@media only screen and (max-width: 767.98px) {
+/* @media only screen and (max-width: 767.98px) {
   .input-subscribe-btn {
     margin-bottom: 96px;
   }
-}
+} */
 .input-subscribe-icon {
   margin-left: 16px;
   fill: #ffffff;
